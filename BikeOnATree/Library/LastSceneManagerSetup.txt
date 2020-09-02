@@ -1,0 +1,13 @@
+sceneSetups:
+- path: Assets/Scenes/MainScene.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
+- path: Assets/Scenes/Angel.unity
+  isLoaded: 1
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/Marcelo.unity
+  isLoaded: 1
+  isActive: 0
+  isSubScene: 0
