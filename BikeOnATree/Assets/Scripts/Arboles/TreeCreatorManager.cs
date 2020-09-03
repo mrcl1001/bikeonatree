@@ -6,11 +6,13 @@ public class TreeCreatorManager : MonoBehaviour
 {
     public GameObject[] gameObjectCollection;
     public int NumMax_ByColumn = 6;
-    public float X_Initial_Position = -34f;
+    public int Size_Position = -1;
 
     // Start is called before the first frame update
     void Start()
     {
+        ProjectProperties.Initial_Calzada_Position = Size_Position;
+
         CreateRandomTreesByColumn();
     }
 
@@ -22,24 +24,27 @@ public class TreeCreatorManager : MonoBehaviour
 
     void CreateRandomTreesByColumn()
     {        
-        float z_pos = 485f;
-        Random random = new Random();
+        float z_pos = ProjectProperties.Initial_Calzada_Z_Position;
+        int min = ProjectProperties.Weight_Min;
+        int max = ProjectProperties.Weight_Max;        
 
-        for(int lado = 0; lado < 50; lado++)
+        for(int lado = 0; lado < ProjectProperties.Max_Num_GeneratedTrees; lado++)
         {
-            float x_pos = X_Initial_Position;
-
             for(int arbol = 0; arbol < NumMax_ByColumn; arbol++)
             {
-                //System.Random rand = new System.Random(); 
-                int rnd = 0;//rand.Next(0, 6);
+                int rnd = Random.Range(0, 4);
+                float dist = Random.Range(min, max);
+                if (ProjectProperties.Initial_Calzada_Position < 0){
+                    dist = -1 * dist;
+                }
 
-                Vector3 position = new Vector3(x_pos, 2.4f, z_pos);
-                Instantiate(gameObjectCollection[rnd], position, gameObjectCollection[rnd].transform.rotation);
-                x_pos += 3f;
+                Vector3 position = new Vector3(dist, ProjectProperties.Max_Height_GeneratedTrees, z_pos);
+                Instantiate(gameObjectCollection[rnd], 
+                            position, 
+                            Quaternion.identity);
             }
 
-            z_pos -= 13f;
+            z_pos -= ProjectProperties.Max_Z_Dist_GeneratedTrees;
         }
     }
 }

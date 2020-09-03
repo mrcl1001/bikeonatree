@@ -130,9 +130,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7650511865210939725, guid: 0a6df3fc495d25f4487109dd980882b6, type: 3}
+      propertyPath: X_Initial_Position
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7650511865210939727, guid: 0a6df3fc495d25f4487109dd980882b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.581003
+      value: -27.5
       objectReference: {fileID: 0}
     - target: {fileID: 7650511865210939727, guid: 0a6df3fc495d25f4487109dd980882b6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -201,11 +205,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7650511865210939725, guid: 0a6df3fc495d25f4487109dd980882b6, type: 3}
       propertyPath: X_Initial_Position
-      value: 20
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650511865210939725, guid: 0a6df3fc495d25f4487109dd980882b6, type: 3}
+      propertyPath: NumMax_ByColumn
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650511865210939725, guid: 0a6df3fc495d25f4487109dd980882b6, type: 3}
+      propertyPath: Size_Position
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7650511865210939727, guid: 0a6df3fc495d25f4487109dd980882b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.261
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7650511865210939727, guid: 0a6df3fc495d25f4487109dd980882b6, type: 3}
       propertyPath: m_LocalPosition.y
