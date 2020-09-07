@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TreeCreatorManager : MonoBehaviour
 {
-    public GameObject[] gameObjectCollection;
+    public GameObject[] treesCollection;
+    public GameObject[] grassCollection;
     public int NumMax_ByColumn = 6;
     public int Size_Position = -1;
 
@@ -28,23 +27,51 @@ public class TreeCreatorManager : MonoBehaviour
         int min = ProjectProperties.Weight_Min;
         int max = ProjectProperties.Weight_Max;        
 
+        //ARBOLES
         for(int lado = 0; lado < ProjectProperties.Max_Num_GeneratedTrees; lado++)
         {
             for(int arbol = 0; arbol < NumMax_ByColumn; arbol++)
             {
-                int rnd = Random.Range(0, 4);
+                int rnd = Random.Range(0, treesCollection.Length);
                 float dist = Random.Range(min, max);
                 if (ProjectProperties.Initial_Calzada_Position < 0){
                     dist = -1 * dist;
                 }
 
                 Vector3 position = new Vector3(dist, ProjectProperties.Max_Height_GeneratedTrees, z_pos);
-                Instantiate(gameObjectCollection[rnd], 
+                Instantiate(treesCollection[rnd], 
                             position, 
                             Quaternion.identity);
             }
 
             z_pos -= ProjectProperties.Max_Z_Dist_GeneratedTrees;
         }
+
+        //HIERBA
+        z_pos = ProjectProperties.Initial_Grass_Position;
+        if (ProjectProperties.Initial_Calzada_Position > 0) {
+            min = -16; max = -35;
+        }
+        else {
+            min = 8; max = 28;
+        }
+
+        for (int lado = 0; lado < ProjectProperties.Max_Num_GeneratedGrass; lado++)
+        {
+            for (int hierba = 0; hierba < NumMax_ByColumn*2; hierba++)
+            {
+                int rnd = Random.Range(0, grassCollection.Length);
+
+                float dist = Random.Range(min, max);
+
+                Vector3 position = new Vector3(dist, 0.08f, z_pos);
+                Instantiate(grassCollection[rnd],
+                            position,
+                            Quaternion.identity);
+            }
+
+            z_pos -= ProjectProperties.Max_Z_Dist_GeneratedTrees/3;
+        }
+
     }
 }

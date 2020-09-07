@@ -109,10 +109,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c0ea18df126074eafe7fc4cef7a09c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectCollection:
+  treesCollection:
   - {fileID: 5920669335578582449, guid: 637bbf912408b6247a4417d7cfa8c64d, type: 3}
   - {fileID: 7541328135363690976, guid: 6b15055a7f212fd479b0a19a68c87a74, type: 3}
   - {fileID: 865644089608896040, guid: 6a24943d738e9d94f987251d3a9341ec, type: 3}
   - {fileID: 6026069915309538966, guid: d35390f5cf03cc54a9b63951569c3417, type: 3}
+  grassCollection:
+  - {fileID: 6234801798820015278, guid: dff5e49956faa2549a4ecba51e892d30, type: 3}
+  - {fileID: 5937107917627234298, guid: 1b69246397089fc49be2969cdadf6022, type: 3}
+  - {fileID: 1171566898041447999, guid: 18b7a8c4c2359a949b26c20cb7b9d02e, type: 3}
+  - {fileID: 1445649762620858565, guid: 48dcfb8a1074714488c5c4308edae751, type: 3}
+  - {fileID: 2248816868555108117, guid: b61881c0075bfa6438d6997872a97219, type: 3}
+  - {fileID: 6920757873398035794, guid: 8c306beac87a90c40a35e426ef9f3e6c, type: 3}
   NumMax_ByColumn: 6
-  X_Initial_Position: -34
+  Size_Position: -1

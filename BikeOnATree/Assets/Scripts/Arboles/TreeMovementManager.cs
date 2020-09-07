@@ -3,7 +3,7 @@
 [RequireComponent(typeof(Rigidbody))]
 public class TreeMovementManager : MonoBehaviour
 {
-    public int Tree_Speed = 10;
+    public int Tree_Speed = 1;
 
     //private Rigidbody _rigidBody;
 
