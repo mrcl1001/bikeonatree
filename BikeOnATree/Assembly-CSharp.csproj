@@ -58,9 +58,10 @@
     <Compile Include="Assets\Scripts\Arboles\TreeMovementManager.cs" />
     <Compile Include="Assets\Scripts\ProjectProperties.cs" />
     <Compile Include="Assets\Scripts\Arboles\TreeCreatorManager.cs" />
-    <Compile Include="Assets\Scripts\MainCamera.cs" />
-    <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Arboles\GrassMovementManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\MainCamera.cs" />
+    <Compile Include="Assets\Scripts\MainVehicles.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
