@@ -12,7 +12,7 @@ public class MainCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _offset = new Vector3(0f, 1.5f, -1.5f);
+        _offset = new Vector3(0f, 1.5f, player.transform.position.z - 65f);
 
         this.transform.position = player.transform.position + _offset;
     }
