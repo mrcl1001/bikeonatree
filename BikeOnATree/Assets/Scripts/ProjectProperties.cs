@@ -15,8 +15,8 @@ public class ProjectProperties
     /// <summary>
     /// GRASS PROPERTIES
     /// </summary>
-    public static float Initial_Grass_Position = 320f;
-    public static float Final_Grass_Position = 200f;
+    public static float Initial_Grass_Position = 420f;
+    public static float Final_Grass_Position = 60f;
 
 
     public static int Tree_Speed { get; set; }
@@ -27,11 +27,11 @@ public class ProjectProperties
     /// </summary>
     #region CALZADA PROPERTIES
     public static float Initial_Calzada_Z_Position = 460f;
-    public static int Weight_Min = 12;
-    public static int Weight_Max = 34;
+    public static int Weight_Min = 16;
+    public static int Weight_Max = 40;
     public static int Max_Num_GeneratedTrees = 50;
-    public static int Max_Num_GeneratedGrass = 35;
-    public static float Max_Height_GeneratedTrees = 2.4f;
+    public static int Max_Num_GeneratedGrass = 100;
+    public static float Max_Height_GeneratedTrees = 0.4f;
     public static float Max_Z_Dist_GeneratedTrees = 10f;
     public static int Initial_Calzada_Position { get; set; }
 

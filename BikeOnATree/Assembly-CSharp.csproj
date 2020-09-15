@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\MainCamera.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\Resources\Trees\Shaders\AN_Vegetation.shader" />
+     <None Include="Assets\Resources\Trees\Shaders\AN_Surface.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

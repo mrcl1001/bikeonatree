@@ -26,7 +26,7 @@ public class TreeCreatorManager : MonoBehaviour
         float z_pos = ProjectProperties.Initial_Calzada_Z_Position;
         int min = ProjectProperties.Weight_Min;
         int max = ProjectProperties.Weight_Max;        
-
+        
         //ARBOLES
         for(int lado = 0; lado < ProjectProperties.Max_Num_GeneratedTrees; lado++)
         {
@@ -34,11 +34,16 @@ public class TreeCreatorManager : MonoBehaviour
             {
                 int rnd = Random.Range(0, treesCollection.Length);
                 float dist = Random.Range(min, max);
-                if (ProjectProperties.Initial_Calzada_Position < 0){
-                    dist = -1 * dist;
+                if (ProjectProperties.Initial_Calzada_Position < 0)
+                {
+                    dist = (-1 * dist);
+                }
+                else {
+                    dist -= 8;
                 }
 
-                Vector3 position = new Vector3(dist, ProjectProperties.Max_Height_GeneratedTrees, z_pos);
+                int rnd_z = Random.Range(-20, 20);
+                Vector3 position = new Vector3(dist, ProjectProperties.Max_Height_GeneratedTrees, (z_pos+rnd_z));
                 Instantiate(treesCollection[rnd], 
                             position, 
                             Quaternion.identity);
@@ -50,7 +55,7 @@ public class TreeCreatorManager : MonoBehaviour
         //HIERBA
         z_pos = ProjectProperties.Initial_Grass_Position;
         if (ProjectProperties.Initial_Calzada_Position > 0) {
-            min = -16; max = -35;
+            min = -18; max = -38;
         }
         else {
             min = 8; max = 28;
@@ -64,7 +69,8 @@ public class TreeCreatorManager : MonoBehaviour
 
                 float dist = Random.Range(min, max);
 
-                Vector3 position = new Vector3(dist, 0.08f, z_pos);
+                int rnd_z = Random.Range(-20, 20);
+                Vector3 position = new Vector3(dist, 0.08f, (z_pos+rnd_z));
                 Instantiate(grassCollection[rnd],
                             position,
                             Quaternion.identity);
